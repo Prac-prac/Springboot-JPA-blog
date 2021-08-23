@@ -1,0 +1,21 @@
+package com.example.blog.controller.api;
+
+import org.springframework.http.HttpStatus;
+import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.RequestBody;
+import org.springframework.web.bind.annotation.RestController;
+
+import com.example.blog.dto.ResponseDto;
+import com.example.blog.model.User;
+
+//앱에서도 쓸 수 있
+@RestController
+public class UserApiController {
+
+//Data to Object(Dto) 데이터를 오브젝트로 변환하는 객체
+	@PostMapping("/api/user")
+	public ResponseDto<Integer> save(@RequestBody User user) {
+		System.out.println("UserApiContorller:save 호출");
+		return new ResponseDto<Integer>(HttpStatus.OK, 1); //user.js로 리턴
+	}
+}

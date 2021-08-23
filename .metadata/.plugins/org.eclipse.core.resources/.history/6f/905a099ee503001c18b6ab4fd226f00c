@@ -1,0 +1,23 @@
+package com.example.blog.service;
+
+import javax.transaction.Transactional;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
+
+import com.example.blog.model.User;
+import com.example.blog.repository.UserRepository;
+
+@Service
+public class UserService {
+	
+	@Autowired
+	private UserRepository userRepository;
+	
+	@Transactional
+	public void 회원가입(User user) {
+		//	try-catch 의미X. 예외 터지면 GlobalExceptionHandler가 잡기 때문에
+		userRepository.save(user);
+	}
+			
+}

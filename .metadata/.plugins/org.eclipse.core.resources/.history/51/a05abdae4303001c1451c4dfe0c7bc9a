@@ -1,0 +1,9 @@
+package com.example.blog.controller.api;
+
+import org.springframework.web.bind.annotation.RestController;
+
+//앱에서도 쓸 수 있
+@RestController
+public class UserApiController {
+
+}

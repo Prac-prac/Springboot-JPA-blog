@@ -1,0 +1,28 @@
+<%@ page language="java" contentType="text/html; charset=utf-8" pageEncoding="utf-8"%>
+
+
+	<div class="container">
+		<div class="card m-2" >
+			<div class="card-body">
+				<h4 class="card-title">제목</h4>
+				<p class="card-text">내용</p>
+				<a href="#" class="btn btn-primary">상세보기</a>
+			</div>
+		</div>
+	</div>
+
+	<div class="jumbotron text-center" style="margin-bottom: 0">
+		<p>😎&nbsp;Create by Prac-prac&nbsp;😎</p>
+		<p>📞&nbsp;010-8282-8822&nbsp;📞</p>
+		<p>📫&nbsp;대전 갑구 을동&nbsp;📫</p>
+		<p>📧&nbsp;prac@prac.com&nbsp;📧</p>
+	</div>
+	
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+</body>
+</html>
+
+

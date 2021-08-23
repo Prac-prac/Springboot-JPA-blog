@@ -1,0 +1,15 @@
+package com.example.blog.model;
+
+import java.sql.Timestamp;
+
+public class User {
+	private int id; //시퀀스(오라클), auto-increment
+	
+	private String userName; //아이디
+	
+	private String password;
+	
+	private String email;
+	
+	private Timestamp createDate;
+}

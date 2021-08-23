@@ -1,0 +1,27 @@
+package com.example.blog.model;
+
+import java.sql.Timestamp;
+
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
+
+//클래스 테이블화
+@Entity //User 클래스가 MySQL에 테이블 자동 생성됨
+public class User {
+	
+	@Id //Primary key
+	//넘버링
+	//프로젝트에서 연결된 DB의 넘버링 전략을 따라간다 ex)오라클-시퀀스, MySQL-increment~
+	@GeneratedValue(strategy = GenerationType.IDENTITY)
+	private int id; //시퀀스(오라클), auto-increment
+	
+	private String userName; //아이디
+	
+	private String password;
+	
+	private String email;
+	
+	private Timestamp createDate;
+}
