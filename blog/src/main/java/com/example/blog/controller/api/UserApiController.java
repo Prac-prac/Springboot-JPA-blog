@@ -23,8 +23,9 @@ public class UserApiController {
 //	@Autowired
 //	private HttpSession session;
 
+//회원가입 로직	
 //Data to Object(Dto) 데이터를 오브젝트로 변환하는 객체
-	@PostMapping("/api/user")
+	@PostMapping("/auth/joinProc")
 	public ResponseDto<Integer> save(@RequestBody User user) {
 		System.out.println("UserApiContorller:save() 호출됨");
 		//실제 DB에 insert하고 return하기
@@ -33,6 +34,7 @@ public class UserApiController {
 		return new ResponseDto<Integer>(HttpStatus.OK.value(), 1); //user.js로 리턴
 	}
 	
+	/* 로그인 전통적인 방식 -> 이제는 시큐리티 이용
 	@PostMapping("/api/user/login")
 	public ResponseDto<Integer> login(@RequestBody User user, HttpSession session){
 		System.out.println("UserApiContorller:login() 호출됨");
@@ -43,4 +45,5 @@ public class UserApiController {
 		}
 		return new ResponseDto<Integer>(HttpStatus.OK.value(), 1);
 	}
+	*/
 }

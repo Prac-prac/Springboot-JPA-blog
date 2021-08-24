@@ -5,10 +5,9 @@ let index = {
 			this.save(); //this가 window객체를 가리킴
 			//fuction(){}으로 하고 싶으면 this 바인딩 해서 _this.save();
 		});
-		$("#btn-login").on("click", ()=>{ //코드 줄이기 위해서X. ()=>{} this를 바인딩하기 위해서. function(){}으로 하고 받으면
-			this.login(); //this가 window객체를 가리킴
-			//fuction(){}으로 하고 싶으면 this 바인딩 해서 _this.save();
-		});
+//		$("#btn-login").on("click", ()=>{ 
+//			this.login(); 
+//		});
 	},
 	
 	
@@ -28,8 +27,9 @@ let index = {
 		$.ajax({
 			//통신 수행 //회원가입 수행 요청
 			type: "POST", //insert니까
-			url: "/api/user",  //UserApiController에서 PostMapping해서 받음
+			url: "/auth/joinProc",  //UserApiController에서 PostMapping해서 받음
 			//data: data -> 위의 Data 그대로 던지면 javascript Object라 자바가 이해X 
+			//아래 2개 세트
 			data: JSON.stringify(data),
 			//POST http body데이터 MIME타입 필요
 			contentType: "application/json; charset=utf-8",
@@ -47,7 +47,7 @@ let index = {
 		}); 
 	},
 	
-	
+	/*
 		login: function(){
 		//alert('user의 save함수 호출됨');
 		//val 찾아서 data 오브젝트에 넣
@@ -80,7 +80,7 @@ let index = {
 		}).fail(function(error){
 			alert(JSON.stringify(error));
 		}); 
-	}
+	} */
 }
 
 index.init();

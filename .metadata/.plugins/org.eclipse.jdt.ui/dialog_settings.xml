@@ -19,6 +19,8 @@
 		<item key="create_unimplemented" value="true"/>
 	</section>
 	<section name="completion_proposal_size">
+		<item key="size.x" value="640"/>
+		<item key="size.y" value="274"/>
 	</section>
 	<section name="quick_assist_proposal_size">
 	</section>
@@ -44,10 +46,17 @@
 		<item key="org.eclipse.jdt.internal.ui.typehierarchy.HierarchyInformationControlDIALOG_USE_PERSISTED_LOCATION" value="false"/>
 	</section>
 	<section name="DialogBounds_OverrideMethodDialog">
-		<item key="DIALOG_X_ORIGIN" value="255"/>
-		<item key="DIALOG_Y_ORIGIN" value="5"/>
+		<item key="DIALOG_X_ORIGIN" value="488"/>
+		<item key="DIALOG_Y_ORIGIN" value="-208"/>
 		<item key="DIALOG_WIDTH" value="605"/>
 		<item key="DIALOG_HEIGHT" value="569"/>
 		<item key="DIALOG_FONT_NAME" value="1|맑은 고딕|9.75|0|WINDOWS|1|-13|0|0|0|400|0|0|0|1|0|0|0|0|맑은 고딕"/>
+	</section>
+	<section name="org.eclipse.jdt.internal.ui.text.QuickOutline">
+		<item key="GoIntoTopLevelTypeAction.isChecked" value="false"/>
+		<item key="org.eclipse.jdt.internal.ui.text.JavaOutlineInformationControlDIALOG_WIDTH" value="950"/>
+		<item key="org.eclipse.jdt.internal.ui.text.JavaOutlineInformationControlDIALOG_HEIGHT" value="580"/>
+		<item key="org.eclipse.jdt.internal.ui.text.JavaOutlineInformationControlDIALOG_USE_PERSISTED_SIZE" value="true"/>
+		<item key="org.eclipse.jdt.internal.ui.text.JavaOutlineInformationControlDIALOG_USE_PERSISTED_LOCATION" value="false"/>
 	</section>
 </section>
