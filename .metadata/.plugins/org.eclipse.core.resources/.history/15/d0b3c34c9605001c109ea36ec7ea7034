@@ -1,0 +1,5 @@
+package com.example.blog.config.auth;
+
+public class PrincipalService {
+
+}

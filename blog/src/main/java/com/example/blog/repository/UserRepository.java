@@ -1,5 +1,7 @@
 package com.example.blog.repository;
 
+import java.util.Optional;
+
 import org.springframework.data.jpa.repository.JpaRepository;
 
 import com.example.blog.model.User;
@@ -10,6 +12,11 @@ import com.example.blog.model.User;
 //자동으로 bean 등록됨
 //@Repository
 public interface UserRepository extends JpaRepository<User, Integer> {
+	//JPA Naming 쿼리
+	//SELECT * FROM user WHERE username=1?;
+	Optional<User> findByUsername(String username);
+	
+	
 	//JPA Naming 쿼리
 	//SELECT * FROM user WHERE username=?1 AND password=?2;
 	//jpa있는거 x. 내가 findby이용해만드는거

@@ -1,0 +1,7 @@
+package com.example.blog.config.auth;
+
+import com.example.blog.model.User;
+
+public class PrincipalDetail {
+	private User user; 
+}
