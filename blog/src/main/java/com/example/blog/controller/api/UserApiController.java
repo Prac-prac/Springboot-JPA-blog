@@ -29,21 +29,24 @@ public class UserApiController {
 	public ResponseDto<Integer> save(@RequestBody User user) {
 		System.out.println("UserApiContorller:save() 호출됨");
 		//실제 DB에 insert하고 return하기
-		user.setRole(RoleType.USER);
 		userService.회원가입(user);
 		return new ResponseDto<Integer>(HttpStatus.OK.value(), 1); //user.js로 리턴
 	}
 	
-	/* 로그인 전통적인 방식 -> 이제는 시큐리티 이용
+	// 로그인 전통적인 방식 -> 이제는 시큐리티 이용
+	/*
 	@PostMapping("/api/user/login")
-	public ResponseDto<Integer> login(@RequestBody User user, HttpSession session){
+	public ResponseDto<Integer> login(@RequestBody User user, HttpSession session) {
 		System.out.println("UserApiContorller:login() 호출됨");
 		User principal = userService.로그인(user); //principal 접근 주체
 		
 		if(principal != null) {
 			session.setAttribute("principal", principal);
+			return new ResponseDto<Integer>(HttpStatus.OK.value(), 1);
+		} else {
+			throw new Error("Test exception block");
+			
 		}
-		return new ResponseDto<Integer>(HttpStatus.OK.value(), 1);
 	}
 	*/
 }

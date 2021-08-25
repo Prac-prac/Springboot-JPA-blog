@@ -8,6 +8,7 @@
 		<item key="incremental" value="false"/>
 		<item key="isRegEx" value="false"/>
 		<list key="findhistory">
+			<item value="@PostMapping(&quot;/api/user/login&quot;)"/>
 			<item value="principal"/>
 			<item value="ajax가 통신을 성공하고 서버가 json을 리턴해주면 자동으로 자바 오브젝트로 변환해"/>
 			<item value="jpa"/>

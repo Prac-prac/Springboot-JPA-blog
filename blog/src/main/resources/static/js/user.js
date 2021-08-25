@@ -5,9 +5,10 @@ let index = {
 			this.save(); //this가 window객체를 가리킴
 			//fuction(){}으로 하고 싶으면 this 바인딩 해서 _this.save();
 		});
-//		$("#btn-login").on("click", ()=>{ 
-//			this.login(); 
-//		});
+		
+	//$("#btn-login").on("click", ()=>{ 
+	//		this.login(); 
+	//	});
 	},
 	
 	
@@ -74,9 +75,10 @@ let index = {
 			//응답의 결과 함수 매개변수로
 			//js Obj로 변환해 응답
 		}).done(function(resp){
+			 if (resp.status === 404) throw new Error('Cannot find principal');
 			alert("로그인이 완료되었습니다.");
 			console.log(resp);
-			location.href="/";
+			//location.href="/";
 		}).fail(function(error){
 			alert(JSON.stringify(error));
 		}); 

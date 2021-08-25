@@ -1,11 +1,9 @@
 <%@ page language="java" contentType="text/html; charset=utf-8" pageEncoding="utf-8"%>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
-<%@ taglib prefix="sec" uri="http://www.springframework.org/security/tags" %>
-
+<%@ taglib prefix="sec" uri="http://www.springframework.org/security/tags"%>
 <sec:authorize access="isAuthenticated()">
-<sec:authentication property="principal" var="principal"/>
+	<sec:authentication property="principal"  var="principal"  />     
 </sec:authorize>
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -25,10 +23,9 @@
 			<span class="navbar-toggler-icon"></span>
 		</button>
 		<div class="collapse navbar-collapse" id="collapsibleNavbar">
-  
+	<!-- 			${empty sessionScope.principal }"  -->
 			<c:choose>
-<!--				<c:when test="${empty sessionScope.principal }">     -->
- 				<c:when test="${empty principal }">
+				<c:when test="${empty principal }">
 					<ul class="navbar-nav">
 						<li class="nav-item"><a class="nav-link" href="/auth/loginForm">Login</a></li>
 						<li class="nav-item"><a class="nav-link" href="/auth/joinForm">Join</a></li>
@@ -42,8 +39,6 @@
 					</ul>
 				</c:otherwise>
 			</c:choose>
-
-
 		</div>
 	</nav>
 	<br />

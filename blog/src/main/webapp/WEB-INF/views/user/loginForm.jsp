@@ -22,6 +22,5 @@
 
 </div>
 
-<!-- <script src="../js/user.js"></script> 자바스크립트 사용 안하고 form 로그인 할것 -->
-
+ <!-- <script src="../js/user.js"></script>  자바스크립트 사용 안하고 form 로그인 할것   -->
 <%@ include file="../layout/footer.jsp"%>
